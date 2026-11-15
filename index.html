@@ -1,1261 +1,514 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>دليل طنطا الطبي | دليلك للوصول إلى الخدمات الطبية</title>
-
-<meta name="description" content="دليل طنطا الطبي، دليلك الرقمي للعثور على العيادات والأطباء والصيدليات ومعامل التحاليل ومراكز الأشعة والخدمات الطبية في طنطا. اكتشف الأقرب إليك وتواصل مباشرة.">
-
-<meta name="keywords" content="دليل طنطا الطبي, أطباء طنطا, عيادات طنطا, صيدليات طنطا, معامل تحاليل طنطا, مراكز أشعة طنطا, مستشفيات طنطا, الخدمات الطبية طنطا">
-
-<meta name="author" content="M - G - S">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#087f83">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="دليل طنطا الطبي">
-<meta property="og:description" content="كل الخدمات الطبية في طنطا، أقرب إليك وأسهل في الوصول.">
-<meta property="og:locale" content="ar_EG">
-
-<!-- ضع رابط موقع GitHub Pages هنا بعد النشر -->
-<!-- <link rel="canonical" href="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/"> -->
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23087f83'/%3E%3Cpath d='M43 20h14v23h23v14H57v23H43V57H20V43h23z' fill='white'/%3E%3C/svg%3E">
-
-<style>
-:root{
---primary:#087f83;
---dark:#075b61;
---light:#e9f8f7;
---blue:#2563a6;
---text:#172b3b;
---muted:#64748b;
---bg:#f5f9fb;
---white:#fff;
---border:#e2ecef;
---shadow:0 12px 35px rgba(15,75,85,.07);
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-
-body{
-font-family:"Segoe UI",Tahoma,Arial,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.9;
-}
-
-a{text-decoration:none;color:inherit}
-
-button{font-family:inherit}
-
-.container{
-width:min(1120px,92%);
-margin:auto;
-}
-
-header{
-background:rgba(255,255,255,.96);
-position:sticky;
-top:0;
-z-index:100;
-border-bottom:1px solid var(--border);
-backdrop-filter:blur(15px);
-}
-
-.nav{
-min-height:76px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:20px;
-}
-
-.brand{
-display:flex;
-align-items:center;
-gap:12px;
-font-size:19px;
-font-weight:900;
-color:var(--dark);
-}
-
-.logo{
-width:46px;
-height:46px;
-background:linear-gradient(145deg,#14b8a6,#075b61);
-border-radius:15px;
-display:grid;
-place-items:center;
-color:white;
-box-shadow:0 5px 15px #087f8340;
-}
-
-.logo svg{width:29px;height:29px}
-
-.nav-links{
-display:flex;
-gap:23px;
-align-items:center;
-font-size:13px;
-font-weight:700;
-color:#475569;
-}
-
-.nav-links a:hover{color:var(--primary)}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:9px;
-padding:12px 22px;
-border-radius:13px;
-font-weight:800;
-font-size:14px;
-transition:.25s;
-border:1px solid transparent;
-}
-
-.btn:hover{transform:translateY(-3px)}
-
-.btn-primary{
-background:var(--primary);
-color:white;
-box-shadow:0 7px 18px #087f8330;
-}
-
-.btn-outline{
-border-color:#b7dddd;
-color:var(--dark);
-background:white;
-}
-
-.btn-white{
-background:white;
-color:var(--dark);
-}
-
-.btn svg{width:19px;height:19px}
-
-.hero{
-position:relative;
-overflow:hidden;
-padding:90px 0 85px;
-background:linear-gradient(125deg,#073f55,#087f83 65%,#16a99d);
-color:white;
-}
-
-.hero:before,.hero:after{
-content:"";
-position:absolute;
-border:1px solid #ffffff18;
-border-radius:50%;
-}
-
-.hero:before{
-width:420px;height:420px;
-top:-220px;right:-100px;
-}
-
-.hero:after{
-width:300px;height:300px;
-bottom:-190px;left:8%;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:760px;
-}
-
-.eyebrow{
-display:inline-block;
-padding:6px 15px;
-border:1px solid #ffffff50;
-border-radius:30px;
-background:#ffffff13;
-font-size:13px;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:clamp(32px,5vw,54px);
-line-height:1.4;
-font-weight:950;
-margin-bottom:18px;
-}
-
-.hero h1 span{color:#8ef2db}
-
-.hero p{
-font-size:17px;
-color:#e0f7f4;
-max-width:650px;
-margin-bottom:28px;
-}
-
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
-
-.hero-note{
-margin-top:24px;
-font-size:12px;
-color:#d0eeee;
-}
-
-.hero-art{
-position:absolute;
-left:8%;
-top:50%;
-transform:translateY(-50%);
-opacity:.16;
-}
-
-.hero-art svg{width:260px;height:260px}
-
-.features{
-position:relative;
-z-index:3;
-margin-top:-35px;
-}
-
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-}
-
-.feature{
-background:white;
-padding:23px 14px;
-text-align:center;
-border:1px solid var(--border);
-border-radius:19px;
-box-shadow:var(--shadow);
-}
-
-.feature-icon{
-width:48px;height:48px;
-margin:0 auto 10px;
-border-radius:15px;
-display:grid;
-place-items:center;
-background:var(--light);
-color:var(--primary);
-}
-
-.feature-icon svg{width:25px;height:25px}
-
-.feature h3{font-size:14px;margin-bottom:3px}
-.feature p{font-size:12px;color:var(--muted)}
-
-section.content-section{padding:80px 0 10px}
-
-.section-title{
-text-align:center;
-margin-bottom:35px;
-}
-
-.section-title .tag{
-color:var(--primary);
-font-size:12px;
-font-weight:900;
-letter-spacing:1px;
-}
-
-.section-title h2{
-font-size:30px;
-font-weight:900;
-margin:8px 0;
-}
-
-.section-title p{
-color:var(--muted);
-font-size:14px;
-max-width:650px;
-margin:auto;
-}
-
-.about-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:35px;
-align-items:center;
-}
-
-.about-text h3{font-size:23px;margin-bottom:14px}
-.about-text p{color:var(--muted);margin-bottom:13px;font-size:15px}
-
-.about-visual{
-background:linear-gradient(145deg,#e1f6f3,#edf5ff);
-border-radius:27px;
-min-height:310px;
-display:grid;
-place-items:center;
-overflow:hidden;
-}
-
-.about-visual svg{width:min(280px,75%);height:auto}
-
-.info-strip{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.info-pill{
-background:#effaf8;
-border-radius:12px;
-padding:9px 15px;
-color:var(--dark);
-font-size:13px;
-font-weight:800;
-}
-
-.services-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
-
-.service-card{
-background:white;
-border:1px solid var(--border);
-border-radius:19px;
-padding:23px;
-transition:.25s;
-}
-
-.service-card:hover{
-transform:translateY(-5px);
-box-shadow:var(--shadow);
-border-color:#a4d9d3;
-}
-
-.service-card .feature-icon{margin:0 0 14px}
-.service-card h3{font-size:16px;margin-bottom:5px}
-.service-card p{font-size:13px;color:var(--muted)}
-
-.nearby{
-margin-top:65px;
-background:linear-gradient(120deg,#075b61,#0b9991);
-border-radius:25px;
-padding:42px;
-color:white;
-display:grid;
-grid-template-columns:1fr auto;
-align-items:center;
-gap:25px;
-}
-
-.nearby h2{font-size:26px;margin-bottom:8px}
-.nearby p{font-size:14px;color:#d7f4f0}
-.nearby svg{width:85px;height:85px}
-
-.audience-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.audience-card{
-background:white;
-padding:30px;
-border:1px solid var(--border);
-border-radius:20px;
-}
-
-.audience-card h3{font-size:20px;margin-bottom:12px}
-.audience-card p{font-size:14px;color:var(--muted);margin-bottom:15px}
-
-.download-banner{
-margin:75px 0 25px;
-padding:45px 30px;
-border-radius:25px;
-text-align:center;
-background:linear-gradient(130deg,#102f49,#087f83);
-color:white;
-}
-
-.download-banner h2{font-size:29px;margin-bottom:10px}
-.download-banner p{color:#d6eeee;margin-bottom:22px}
-
-.version{
-display:inline-block;
-font-size:12px;
-background:#ffffff20;
-border:1px solid #ffffff40;
-padding:5px 15px;
-border-radius:20px;
-margin-bottom:15px;
-}
-
-.legal-section{
-background:white;
-padding:30px;
-border:1px solid var(--border);
-border-radius:21px;
-margin-bottom:20px;
-}
-
-.legal-section h3{
-font-size:19px;
-color:var(--dark);
-margin-bottom:15px;
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.legal-section h3 svg{
-width:23px;height:23px;
-flex-shrink:0;
-}
-
-.legal-section h4{
-font-size:15px;
-margin:17px 0 5px;
-}
-
-.legal-section p,.legal-section li{
-font-size:14px;
-color:var(--muted);
-}
-
-.legal-section ul{
-padding-right:22px;
-margin-top:10px;
-}
-
-.updated{
-font-size:12px;
-color:#94a3b8;
-margin-top:12px;
-}
-
-.deletion{
-background:#fffaf0;
-border:1px solid #f2dfb7;
-border-radius:20px;
-padding:30px;
-margin:35px 0;
-}
-
-.deletion h3{color:#8a5b16;font-size:22px;margin-bottom:10px}
-.deletion p{color:#755d3c;font-size:14px}
-
-.delete-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:15px;
-margin:20px 0;
-}
-
-.delete-card{
-background:white;
-border:1px solid #eee1c9;
-border-radius:15px;
-padding:20px;
-}
-
-.delete-card h4{margin-bottom:8px;color:#79551f}
-.delete-card p{font-size:13px;color:#776a57}
-
-.delete-steps{
-margin:15px 0 20px;
-padding-right:22px;
-color:#755d3c;
-font-size:14px;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-}
-
-.contact-card{
-background:white;
-border:1px solid var(--border);
-padding:25px 15px;
-text-align:center;
-border-radius:18px;
-}
-
-.contact-card .feature-icon{margin-bottom:12px}
-.contact-card h3{font-size:15px}
-.contact-card p{font-size:12px;color:var(--muted);margin:5px 0 13px}
-
-footer{
-margin-top:70px;
-padding:40px 0 20px;
-background:#102f40;
-color:white;
-}
-
-.footer-main{
-display:flex;
-justify-content:space-between;
-gap:30px;
-flex-wrap:wrap;
-padding-bottom:30px;
-}
-
-.footer-main h3{margin-bottom:12px}
-.footer-main p,.footer-main a{font-size:13px;color:#b9ced6}
-
-.footer-links{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.copyright{
-border-top:1px solid #ffffff20;
-padding-top:18px;
-text-align:center;
-font-size:12px;
-color:#a9c1ca;
-}
-
-.float-download{
-position:fixed;
-bottom:18px;
-left:18px;
-z-index:99;
-border-radius:50px;
-box-shadow:0 6px 20px #0003;
-}
-
-@media(max-width:800px){
-.nav-links{display:none}
-.hero{padding:65px 0}
-.hero-art{display:none}
-.feature-grid{grid-template-columns:repeat(2,1fr)}
-.about-grid{grid-template-columns:1fr}
-.services-grid{grid-template-columns:repeat(2,1fr)}
-.nearby{grid-template-columns:1fr}
-.nearby svg{display:none}
-.contact-grid{grid-template-columns:1fr}
-}
-
-@media(max-width:520px){
-.brand{font-size:15px}
-.hero h1{font-size:34px}
-.hero p{font-size:14px}
-.services-grid,.audience-grid,.delete-grid{grid-template-columns:1fr}
-.section-title h2{font-size:25px}
-.legal-section{padding:22px 17px}
-.nearby{padding:27px 20px}
-.download-banner{padding:35px 18px}
-.btn{padding:11px 16px}
-}
-</style>
-
-<!-- بيانات الموقع لمحركات البحث -->
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"MobileApplication",
- "name":"دليل طنطا الطبي",
- "operatingSystem":"Android",
- "applicationCategory":"MedicalApplication",
- "description":"دليل رقمي للوصول إلى الخدمات الطبية في طنطا.",
- "softwareVersion":"1.0.2",
- "downloadUrl":"https://play.google.com/store/apps/details?id=com.taaban.app",
- "author":{
-   "@type":"Organization",
-   "name":"M - G - S"
- }
-}
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags & Keywords -->
+  <title>تطبيق دليل طنطا الطبي — دليل الخدمات الطبية ومقدمي الرعاية الصحية</title>
+  <meta name="description" content="تطبيق دليل طنطا الطبي هو دليلك المحلي الشامل للوصول إلى العيادات، المستشفيات، المعامل، والصيدليات في طنطا بسهولة. اعثر على الأقرب إليك وبيانات التواصل والعناوين بدقة." />
+  <meta name="keywords" content="دليل طنطا الطبي, صيدليات طنطا, عيادات طنطا, دليل الخدمات الطبية, مستشفيات طنطا, M-G-S, تتبع الأماكن الطبية" />
+  <meta name="author" content="M - G - S" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="دليل طنطا الطبي — دليل الخدمات الطبية في طنطا" />
+  <meta property="og:description" content="ابحث عن العيادات، الصيدليات، والمراكز الطبية في طنطا وتعرف على عناوينها ومواعيد عملها بكل سهولة." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root {
+      --primary: #0d9488;
+      --primary-dark: #0f766e;
+      --primary-light: #f0fdfa;
+      --accent: #14b8a6;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --bg-body: #f8fafc;
+      --border-color: #ccfbf1;
+      --card-bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.8;
+      direction: rtl;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(145deg, #2dd4bf 0%, #0d9488 50%, #115e59 100%);
+      padding: 70px 20px 60px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 30px;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      background: rgba(255,255,255,0.15);
+      border: 3px solid rgba(255,255,255,0.4);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    }
+    .hero-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 26px;
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-top: 18px;
+      backdrop-filter: blur(5px);
+    }
+
+    /* ===== CONTAINER & NAVIGATION ===== */
+    .container {
+      max-width: 900px;
+      margin: -30px auto 0;
+      padding: 0 20px 80px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
+      justify-content: center;
+    }
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
+      padding: 12px 24px;
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--primary);
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(13,148,136,0.06);
+      transition: all 0.25s ease;
+      text-decoration: none;
+    }
+    .tab-btn:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* ===== DOWNLOAD CTA BANNER ===== */
+    .download-banner {
+      background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(13,148,136,0.2);
+    }
+    .download-banner h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .download-banner p {
+      font-size: 1rem;
+      opacity: 0.95;
+      margin-bottom: 20px;
+    }
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0f172a;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+    }
+    .store-btn:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+    }
+
+    /* ===== SECTION STYLING ===== */
+    .section {
+      background: var(--card-bg);
+      border-radius: 24px;
+      border: 1.5px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(13,148,136,0.06);
+      padding: 40px 35px;
+      margin-bottom: 30px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+    .section-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .icon-teal   { background: var(--primary-light); }
+    .icon-blue   { background: #eff6ff; }
+    .icon-purple { background: #f5f3ff; }
+    .icon-green  { background: #f0fdf4; }
+
+    .section-header h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ===== INFO GRID ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 25px;
+    }
+    .info-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 18px 20px;
+      border: 1px solid #e2e8f0;
+    }
+    .info-card .label {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .info-card .value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      word-break: break-all;
+    }
+
+    /* ===== POLICY LIST ===== */
+    .policy-list {
+      list-style: none;
+      padding: 0;
+    }
+    .policy-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.85;
+    }
+    .policy-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .list-num {
+      min-width: 34px;
+      height: 34px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ===== HIGHLIGHT BOX ===== */
+    .highlight-box {
+      background: #f0fdfa;
+      border: 1.5px dashed var(--primary);
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .highlight-box h3 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    /* ===== CONTACT BUTTONS ===== */
+    .contact-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .contact-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+    .btn-teal  { background: var(--primary); color: #fff; }
+    .btn-green { background: #16a34a; color: #fff; }
+    .btn-blue  { background: #2563eb; color: #fff; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #94a3b8;
+      font-size: 0.88rem;
+      border-top: 1px solid #e2e8f0;
+      margin-top: 30px;
+      background: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.8rem; }
+      .hero-icon { width: 100px; height: 100px; border-radius: 24px; }
+      .section { padding: 25px 20px; }
+      .contact-row { flex-direction: column; }
+      .contact-btn { justify-content: center; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<div class="container nav">
-
-<a href="#home" class="brand">
-<div class="logo">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-<path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/>
-</svg>
-</div>
-دليل طنطا الطبي
-</a>
-
-<nav class="nav-links">
-<a href="#about">عن التطبيق</a>
-<a href="#services">الخدمات</a>
-<a href="#privacy">الخصوصية</a>
-<a href="#terms">الشروط</a>
-<a href="#delete">حذف البيانات</a>
-<a href="#contact">تواصل معنا</a>
-</nav>
-
-<a class="btn btn-primary" target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-تحميل التطبيق
-</a>
-
-</div>
+<!-- ===== HERO HEADER ===== -->
+<header class="hero">
+  <div class="hero-icon">
+    <img src="assets/icon.png" alt="أيقونة تطبيق دليل طنطا الطبي" />
+  </div>
+  <h1>تطبيق دليل طنطا الطبي</h1>
+  <p>دليلك المحلي الموثوق للوصول إلى مقدمي الخدمات الطبية، العيادات، الصيدليات، والمراكز الصحية في طنطا بكل سهولة وسرعة.</p>
+  <span class="badge">الإصدار 1.0.2 — متوافق مع معايير الأمان وجوجل بلاي</span>
 </header>
 
-<main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-<div class="container hero-content">
-
-<span class="eyebrow">دليلك الطبي في طنطا</span>
-
-<h1>
-الرعاية الطبية أقرب إليك،
-<br>
-<span>والطريق إليها أصبح أسهل</span>
-</h1>
-
-<p>
-دليل طنطا الطبي يجمع لك الخدمات والمنشآت الطبية في مكان واحد.
-استكشف العناوين، تعرف على مواقع الخدمات، وتواصل مباشرة مع مقدم الخدمة الذي تبحث عنه.
-</p>
-
-<div class="hero-actions">
-
-<a class="btn btn-white" target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-
-<svg viewBox="0 0 24 24" fill="currentColor" width="20">
-<path d="M3 2.5v19l11-9.5z"/>
-<path d="m15 10 4-4-13-5zM15 14l4 4-13 5zM20 7l-4 4 4 3 2-1.5v-4z"/>
-</svg>
-حمّل التطبيق الآن
-</a>
-
-<a href="#about" class="btn btn-outline" style="background:transparent;color:white;border-color:#ffffff70">
-اكتشف خدماتنا
-</a>
-
-</div>
-
-<div class="hero-note">
-الإصدار 1.0.2 | منصة دليلية للخدمات الطبية في طنطا
-</div>
-
-</div>
-
-<div class="hero-art">
-<svg viewBox="0 0 200 200" fill="none" stroke="white" stroke-width="5">
-<rect x="30" y="30" width="140" height="140" rx="35"/>
-<path d="M90 55h20v35h35v20h-35v35H90v-35H55V90h35z"/>
-</svg>
-</div>
-</section>
-
-<!-- FEATURES -->
-
-<div class="container features">
-<div class="feature-grid">
-
-<div class="feature">
-<div class="feature-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<circle cx="10" cy="10" r="7"/><path d="m15 15 6 6"/>
-</svg>
-</div>
-<h3>بحث سهل</h3>
-<p>الوصول إلى الخدمات الطبية</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
-<circle cx="12" cy="10" r="2.5"/>
-</svg>
-</div>
-<h3>الأقرب إليك</h3>
-<p>اكتشف المواقع القريبة منك</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.5 10a16 16 0 0 0 6 6l1.5-1.5a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 2.2 2.5Z"/>
-</svg>
-</div>
-<h3>تواصل مباشر</h3>
-<p>بيانات الاتصال بمقدمي الخدمة</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M3 5h18M3 12h18M3 19h18"/>
-<circle cx="8" cy="5" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="19" r="2"/>
-</svg>
-</div>
-<h3>دليل منظم</h3>
-<p>الخدمات في مكان واحد</p>
-</div>
-
-</div>
-</div>
-
-<!-- ABOUT -->
-
-<section class="content-section" id="about">
-<div class="container">
-
-<div class="section-title">
-<span class="tag">ABOUT THE APP</span>
-<h2>عن دليل طنطا الطبي</h2>
-<p>حل رقمي يساعدك على الوصول إلى المعلومات الطبية والمكانية بسهولة.</p>
-</div>
-
-<div class="about-grid">
-
-<div class="about-text">
-<h3>دليلك إلى الخدمات الطبية في طنطا</h3>
-
-<p>
-دليل طنطا الطبي هو تطبيق خدمي يهدف إلى تسهيل وصول سكان طنطا وزوارها إلى المنشآت ومقدمي الخدمات الطبية المختلفة.
-</p>
-
-<p>
-من خلال التطبيق يمكنك استكشاف بيانات الجهات الطبية، والاطلاع على العناوين ووسائل التواصل والمواقع الجغرافية، والاستفادة من خاصية الأقرب إليك للوصول إلى الأماكن المحيطة بك.
-</p>
-
-<p>
-نؤمن بأن الوصول إلى المعلومة الصحيحة خطوة مهمة، ولذلك نسعى إلى تقديم دليل رقمي بسيط ومنظم يجعل البحث عن الخدمات الطبية أكثر سهولة.
-</p>
-
-<div class="info-strip">
-<span class="info-pill">سهل الاستخدام</span>
-<span class="info-pill">دليل محلي</span>
-<span class="info-pill">تواصل مباشر</span>
-</div>
-
-<br>
-
-<a class="btn btn-primary" target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-اكتشف التطبيق
-</a>
-</div>
-
-<div class="about-visual">
-<svg viewBox="0 0 300 300" fill="none">
-<rect x="55" y="35" width="190" height="230" rx="28" fill="white"/>
-<rect x="72" y="55" width="156" height="190" rx="15" fill="#e9f8f7"/>
-<circle cx="150" cy="135" r="55" fill="#b8e9df"/>
-<path d="M150 80c-27 0-48 21-48 48 0 34 48 82 48 82s48-48 48-82c0-27-21-48-48-48Z" fill="#087f83"/>
-<circle cx="150" cy="128" r="19" fill="white"/>
-<path d="M145 116h10v7h7v10h-7v7h-10v-7h-7v-10h7z" fill="#087f83"/>
-<rect x="110" y="225" width="80" height="6" rx="3" fill="#087f83" opacity=".4"/>
-</svg>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- SERVICES -->
-
-<section class="content-section" id="services">
-<div class="container">
-
-<div class="section-title">
-<span class="tag">MEDICAL DIRECTORY</span>
-<h2>استكشف الخدمات الطبية</h2>
-<p>مكان واحد للوصول إلى مجموعة متنوعة من الخدمات والمنشآت الطبية.</p>
-</div>
-
-<div class="services-grid">
-
-<div class="service-card">
-<div class="feature-icon">🩺</div>
-<h3>العيادات والأطباء</h3>
-<p>الوصول إلى بيانات العيادات ومقدمي الخدمات الطبية.</p>
-</div>
-
-<div class="service-card">
-<div class="feature-icon">💊</div>
-<h3>الصيدليات</h3>
-<p>التعرف على مواقع الصيدليات ووسائل التواصل معها.</p>
-</div>
-
-<div class="service-card">
-<div class="feature-icon">🧪</div>
-<h3>معامل التحاليل</h3>
-<p>استكشاف معامل التحاليل وبياناتها ومواقعها.</p>
-</div>
-
-<div class="service-card">
-<div class="feature-icon">🩻</div>
-<h3>مراكز الأشعة</h3>
-<p>البحث عن مراكز الأشعة والخدمات المرتبطة بها.</p>
-</div>
-
-<div class="service-card">
-<div class="feature-icon">🏥</div>
-<h3>المستشفيات</h3>
-<p>التعرف على المستشفيات والمنشآت الصحية.</p>
-</div>
-
-<div class="service-card">
-<div class="feature-icon">❤️</div>
-<h3>خدمات طبية متنوعة</h3>
-<p>دليل يساعدك على استكشاف المزيد من الخدمات الطبية.</p>
-</div>
-
-</div>
-
-<div class="nearby">
-
-<div>
-<h2>خدمة الأقرب إليك</h2>
-<p>
-لا تضيع وقتك في البحث العشوائي.
-استخدم خاصية الموقع الجغرافي للتعرف على المنشآت الطبية القريبة منك ومواقعها على الخريطة.
-</p>
-<br>
-<a class="btn btn-white" target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-جرّب التطبيق الآن
-</a>
-</div>
-
-<svg viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="3">
-<circle cx="50" cy="50" r="43" opacity=".3"/>
-<path d="M75 40c0 19-25 44-25 44S25 59 25 40a25 25 0 1 1 50 0Z"/>
-<circle cx="50" cy="40" r="9"/>
-<path d="M10 50h15M75 50h15M50 10v15M50 75v15" opacity=".5"/>
-</svg>
-
-</div>
-</div>
-</section>
-
-<!-- USERS AND PROVIDERS -->
-
-<section class="content-section" id="audience">
-<div class="container">
-
-<div class="section-title">
-<span class="tag">OUR COMMUNITY</span>
-<h2>دليل يخدم الجميع</h2>
-<p>سواء كنت تبحث عن خدمة طبية أو تقدم خدمة طبية، نحن نهتم بحقوقك وخصوصيتك.</p>
-</div>
-
-<div class="audience-grid">
-
-<div class="audience-card">
-<div class="feature-icon">👨‍👩‍👧</div>
-<h3>للمستخدمين</h3>
-<p>
-اكتشف الخدمات الطبية، تصفح المواقع، تعرف على بيانات التواصل، واستفد من خاصية الأقرب إليك.
-</p>
-<a class="btn btn-primary" target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-تحميل التطبيق
-</a>
-</div>
-
-<div class="audience-card">
-<div class="feature-icon">👨‍⚕️</div>
-<h3>لمقدمي الخدمات الطبية</h3>
-<p>
-يهدف الدليل إلى تسهيل وصول الجمهور إلى بيانات المنشآت ومقدمي الخدمات الطبية، وتعزيز ظهور المعلومات الخاصة بهم.
-</p>
-<a href="#contact" class="btn btn-outline">تواصل مع الإدارة</a>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- DOWNLOAD -->
-
-<div class="container">
-<div class="download-banner">
-
-<div class="version">الإصدار 1.0.2</div>
-
-<h2>ابدأ رحلتك مع دليل طنطا الطبي</h2>
-
-<p>حمّل التطبيق واستكشف الخدمات الطبية من هاتفك بسهولة.</p>
-
-<a class="btn btn-white" target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-
-<svg viewBox="0 0 24 24" fill="currentColor" width="20">
-<path d="M3 2.5v19l11-9.5z"/>
-<path d="m15 10 4-4-13-5zM15 14l4 4-13 5z"/>
-</svg>
-تحميل من Google Play
-</a>
-
-</div>
-</div>
-
-<!-- PRIVACY -->
-
-<section class="content-section" id="privacy">
-<div class="container">
-
-<div class="section-title">
-<span class="tag">PRIVACY POLICY</span>
-<h2>سياسة الخصوصية</h2>
-<p>نحترم خصوصية المستخدمين ومقدمي الخدمات، ونوضح هنا كيفية التعامل مع البيانات.</p>
-</div>
-
-<div class="legal-section">
-
-<h3>
-<svg viewBox="0 0 24 24" fill="none" stroke="#087f83" stroke-width="2">
-<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"/>
-<path d="m9 12 2 2 4-4"/>
-</svg>
-1. مقدمة
-</h3>
-
-<p>
-توضح سياسة الخصوصية هذه المبادئ المنظمة للتعامل مع المعلومات والبيانات المرتبطة باستخدام تطبيق دليل طنطا الطبي وموقعه الإلكتروني.
-باستخدام التطبيق، فإنك تقر باطلاعك على هذه السياسة.
-</p>
-
-<h4>2. المعلومات والبيانات</h4>
-<p>
-قد تتضمن البيانات التي تتم معالجتها، بحسب الوظائف التي تستخدمها، معلومات تقنية متعلقة بالجهاز والتطبيق، وبيانات الموقع الجغرافي عند استخدام الخدمات التي تتطلب ذلك، وأي بيانات يقدمها المستخدم أو مقدم الخدمة طواعية من خلال وسائل التطبيق.
-</p>
-<p>
-قد تختلف البيانات التي تتم معالجتها باختلاف الوظائف والإصدار المستخدم والأذونات الممنوحة.
-</p>
-
-<h4>3. الموقع الجغرافي</h4>
-<p>
-قد يطلب التطبيق إذن الوصول إلى الموقع الجغرافي عند استخدام خاصية «الأقرب إليك»، وذلك بغرض تحديد المواقع الطبية القريبة وعرضها للمستخدم.
-يمكنك التحكم في إذن الموقع من إعدادات جهازك. ولا يعني منح الإذن السماح بالتتبع المستمر خارج نطاق الوظيفة المستخدمة.
-</p>
-
-<h4>4. بيانات مقدمي الخدمات</h4>
-<p>
-قد يتضمن الدليل بيانات تعريفية ومهنية وبيانات تواصل ومواقع جغرافية خاصة بالمنشآت ومقدمي الخدمات، وفقاً للمعلومات المتاحة أو التي يتم تقديمها لإدارة التطبيق.
-يتعين على مقدم الخدمة التأكد من صحة المعلومات التي يقدمها أو يطلب نشرها.
-</p>
-
-<h4>5. استخدام البيانات</h4>
-<ul>
-<li>تشغيل خدمات الدليل وتحسين تجربة الاستخدام.</li>
-<li>عرض بيانات المنشآت والخدمات الطبية.</li>
-<li>توفير وظائف البحث والموقع الجغرافي عند استخدامها.</li>
-<li>الرد على الاستفسارات وطلبات الدعم.</li>
-<li>معالجة طلبات تعديل البيانات أو حذفها.</li>
-<li>حماية التطبيق والحد من الاستخدام غير المشروع.</li>
-</ul>
-
-<h4>6. مشاركة البيانات</h4>
-<p>
-لا يتم بيع البيانات الشخصية للمستخدمين لأغراض تجارية. وقد تتم معالجة أو مشاركة المعلومات بالقدر اللازم لتشغيل الخدمات التقنية أو الامتثال للالتزامات القانونية، مع مراعاة متطلبات حماية البيانات المعمول بها.
-</p>
-
-<h4>7. خدمات الأطراف الثالثة</h4>
-<p>
-قد يعتمد التطبيق على خدمات خارجية مثل الخرائط أو خدمات Google أو خدمات تشغيلية أخرى. وتخضع معالجة البيانات بواسطة هذه الخدمات لسياسات الخصوصية الخاصة بمقدميها.
-</p>
-
-<h4>8. حماية المعلومات</h4>
-<p>
-نعمل على اتخاذ تدابير تقنية وتنظيمية مناسبة لحماية المعلومات من الوصول غير المصرح به أو الاستخدام أو التعديل أو الإفصاح غير المشروع، وفقاً لطبيعة البيانات والخدمات المستخدمة.
-</p>
-
-<h4>9. الاحتفاظ بالبيانات</h4>
-<p>
-يتم الاحتفاظ بالبيانات للمدة اللازمة لتحقيق الغرض الذي جُمعت من أجله أو للوفاء بالالتزامات القانونية والتشغيلية، وبعد ذلك يتم حذفها أو إخفاء هويتها متى كان ذلك مناسباً.
-</p>
-
-<h4>10. حقوق المستخدم</h4>
-<p>
-يحق للمستخدم ومقدم الخدمة طلب الاطلاع على البيانات المرتبطة بهما، أو تصحيحها أو تحديثها أو طلب حذفها، وذلك من خلال وسائل التواصل الرسمية الموضحة بالموقع، مع مراعاة أي التزامات قانونية تمنع الحذف الفوري.
-</p>
-
-<h4>11. خصوصية الأطفال</h4>
-<p>
-لا يستهدف التطبيق جمع البيانات الشخصية للأطفال بشكل مستقل دون مراعاة المتطلبات القانونية وموافقة ولي الأمر حيثما يلزم.
-</p>
-
-<h4>12. التعديلات على السياسة</h4>
-<p>
-يجوز تحديث سياسة الخصوصية عند تطوير التطبيق أو تغيير وظائفه. وسيتم نشر النسخة المحدثة على هذه الصفحة مع تعديل تاريخ التحديث.
-</p>
-
-<h4>13. التواصل بشأن الخصوصية</h4>
-<p>
-لأي استفسارات أو طلبات متعلقة بالخصوصية والبيانات، يمكنك التواصل عبر البريد الإلكتروني أو واتساب من قسم التواصل.
-</p>
-
-<p class="updated">آخر تحديث: نوفمبر 2026</p>
-
-</div>
-</div>
-</section>
-
-<!-- TERMS -->
-
-<section class="content-section" id="terms">
-<div class="container">
-
-<div class="section-title">
-<span class="tag">TERMS OF USE</span>
-<h2>شروط الاستخدام وإخلاء المسؤولية</h2>
-<p>يرجى قراءة الشروط التالية قبل استخدام التطبيق.</p>
-</div>
-
-<div class="legal-section">
-
-<h3>⚖️ 1. طبيعة التطبيق</h3>
-<p>
-دليل طنطا الطبي هو دليل معلوماتي وإرشادي يساعد المستخدمين على الوصول إلى بيانات المنشآت ومقدمي الخدمات الطبية ووسائل التواصل معهم ومواقعهم الجغرافية.
-</p>
-
-<h4>2. عدم تقديم خدمات طبية</h4>
-<p>
-التطبيق ليس منشأة طبية ولا جهة علاجية، ولا يقدم تشخيصاً أو وصفات علاجية أو استشارات طبية أو قرارات بشأن الحالة الصحية للمستخدم.
-المعلومات المعروضة لا تغني عن الرجوع إلى طبيب أو مختص مؤهل.
-</p>
-
-<h4>3. طبيعة العلاقة مع مقدمي الخدمات</h4>
-<p>
-التطبيق يعمل كوسيط معلوماتي ودليل للتواصل المباشر، ولا يمثل مقدمي الخدمات الطبية ولا يتدخل في العلاقة المهنية أو المالية بينهم وبين المستخدمين.
-</p>
-
-<h4>4. دقة البيانات وتحديثها</h4>
-<p>
-قد يتم الحصول على البيانات من مقدمي الخدمات أو مصادر معلوماتية متاحة. نبذل جهداً لمراجعتها وتحديثها، لكن لا يمكن ضمان خلو جميع البيانات من الأخطاء أو التغيرات.
-يُنصح بالتحقق المباشر من المواعيد والأسعار وتوافر الخدمات قبل التوجه إلى أي منشأة.
-</p>
-
-<h4>5. مسؤولية المستخدم</h4>
-<p>
-يتحمل المستخدم مسؤولية التحقق من ملاءمة مقدم الخدمة واختيار الجهة المناسبة، وأي تعامل أو اتفاق يتم مباشرة بينه وبين مقدم الخدمة.
-</p>
-
-<h4>6. مسؤولية مقدم الخدمة</h4>
-<p>
-يلتزم مقدم الخدمة بتقديم بيانات صحيحة ومحدثة، وعدم استخدام الدليل لنشر معلومات مضللة أو مخالفة للقوانين أو حقوق الآخرين.
-</p>
-
-<h4>7. الخرائط والموقع الجغرافي</h4>
-<p>
-تُعرض المواقع الجغرافية لأغراض الإرشاد، وقد تتأثر دقتها بتحديثات الخرائط أو خدمات تحديد الموقع أو تغير العناوين.
-</p>
-
-<h4>8. الاستخدام المسموح</h4>
-<ul>
-<li>استخدام التطبيق للأغراض المشروعة والشخصية.</li>
-<li>عدم محاولة اختراق التطبيق أو تعطيل خدماته.</li>
-<li>عدم نشر معلومات مضللة أو منتهكة لحقوق الغير.</li>
-<li>عدم إساءة استخدام بيانات الاتصال المعروضة.</li>
-</ul>
-
-<h4>9. حقوق الملكية الفكرية</h4>
-<p>
-تعود حقوق التصميم والهوية والعناصر البرمجية الخاصة بالتطبيق والموقع إلى أصحابها، ولا يجوز نسخها أو إعادة استخدامها تجارياً دون تصريح.
-</p>
-
-<h4>10. حدود المسؤولية</h4>
-<p>
-لا تتحمل إدارة التطبيق مسؤولية القرارات الطبية أو نتائج الخدمات المقدمة من الجهات المدرجة، أو الاتفاقات التي تتم مباشرة بينها وبين المستخدمين، مع عدم الإخلال بأي حقوق أو مسؤوليات يقررها القانون.
-</p>
-
-<h4>11. تعديل الشروط</h4>
-<p>
-تحتفظ إدارة التطبيق بحق تحديث هذه الشروط بما يتناسب مع تطوير الخدمات، ويعد استمرار الاستخدام بعد نشر التحديث قبولاً بالشروط المعدلة بالقدر المسموح به قانوناً.
-</p>
-
-<h4>12. القانون المعمول به</h4>
-<p>
-تخضع هذه الشروط للقوانين واللوائح المعمول بها في جمهورية مصر العربية.
-</p>
-
-<p class="updated">آخر تحديث: نوفمبر 2026</p>
-
-</div>
-</div>
-</section>
-
-<!-- DATA DELETION -->
-
-<section class="content-section" id="delete">
-<div class="container">
-
-<div class="section-title">
-<span class="tag">DATA CONTROL</span>
-<h2>طلب حذف البيانات</h2>
-<p>نحترم حقك في التحكم في بياناتك، سواء كنت مستخدماً للتطبيق أو مقدم خدمة طبية.</p>
-</div>
-
-<div class="deletion">
-
-<h3>🗑️ حقك في حذف بياناتك</h3>
-
-<p>
-يمكنك تقديم طلب رسمي لحذف البيانات المرتبطة باستخدامك للتطبيق أو البيانات الخاصة بمنشأتك أو حسابك كمقدم خدمة.
-يتم مراجعة الطلب والتحقق من هوية صاحبه قبل اتخاذ الإجراء المناسب.
-</p>
-
-<div class="delete-grid">
-
-<div class="delete-card">
-<h4>👤 أولاً: المستخدمون</h4>
-<p>
-يحق لمستخدم التطبيق طلب حذف البيانات الشخصية المرتبطة به، بما في ذلك بيانات الحساب أو المعلومات التي قدمها، إن وجدت.
-</p>
-</div>
-
-<div class="delete-card">
-<h4>🏥 ثانياً: مقدمو الخدمات</h4>
-<p>
-يمكن للطبيب أو المنشأة أو مقدم الخدمة طلب حذف بياناته أو بيانات منشأته من الدليل، وفقاً لحقوق الملكية والتحقق من صفة مقدم الطلب.
-</p>
-</div>
-
-</div>
-
-<h4>كيفية تقديم طلب الحذف:</h4>
-
-<ol class="delete-steps">
-<li>اضغط على زر طلب حذف البيانات.</li>
-<li>حدد ما إذا كنت مستخدماً أم مقدم خدمة.</li>
-<li>اكتب الاسم ووسيلة التواصل والبيانات التي تريد حذفها.</li>
-<li>أرسل الطلب عبر البريد الإلكتروني الرسمي.</li>
-<li>ستتم مراجعة الطلب والتحقق منه والتعامل معه وفقاً للسياسة والقوانين المعمول بها.</li>
-</ol>
-
-<p>
-يرجى العلم أن بعض البيانات قد يلزم الاحتفاظ بها لفترة محددة لأسباب قانونية أو أمنية أو تنظيمية. كما أن حذف بيانات المنشأة من الدليل لا يعني بالضرورة حذف المعلومات المنشورة لدى أطراف خارجية.
-</p>
-
-<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
-
-<a class="btn btn-primary"
-href="mailto:abomalak666666666666@gmail.com?subject=%D8%B7%D9%84%D8%A8%20%D8%AD%D8%B0%D9%81%20%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA&body=%D9%86%D9%88%D8%B9%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%3A%20%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%20%2F%20%D9%85%D9%82%D8%AF%D9%85%20%D8%AE%D8%AF%D9%85%D8%A9%0A%D8%A7%D9%84%D8%A7%D8%B3%D9%85%3A%0A%D9%88%D8%B3%D9%8A%D9%84%D8%A9%20%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84%3A%0A%D8%A7%D9%84%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%B7%D9%84%D9%88%D8%A8%20%D8%AD%D8%B0%D9%81%D9%87%D8%A7%3A">
-طلب حذف البيانات عبر البريد
-</a>
-
-<a class="btn btn-outline"
-target="_blank"
-href="https://wa.me/201062186746?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AA%D9%82%D8%AF%D9%8A%D9%85%20%D8%B7%D9%84%D8%A8%20%D8%AD%D8%B0%D9%81%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%D9%8A">
-التواصل عبر واتساب
-</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- CONTACT -->
-
-<section class="content-section" id="contact">
-<div class="container">
-
-<div class="section-title">
-<span class="tag">CONTACT US</span>
-<h2>نحن هنا للتواصل معك</h2>
-<p>نسعد باستقبال استفساراتكم واقتراحاتكم وطلبات تحديث البيانات.</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-card">
-<div class="feature-icon">📞</div>
-<h3>اتصال هاتفي</h3>
-<p>للتواصل المباشر مع الإدارة</p>
-<a class="btn btn-primary" href="tel:01062186746">01062186746</a>
-</div>
-
-<div class="contact-card">
-<div class="feature-icon">💬</div>
-<h3>واتساب</h3>
-<p>راسلنا للاستفسارات والدعم</p>
-<a class="btn btn-primary" target="_blank"
-href="https://wa.me/201062186746">مراسلة واتساب</a>
-</div>
-
-<div class="contact-card">
-<div class="feature-icon">✉️</div>
-<h3>البريد الإلكتروني</h3>
-<p>للطلبات الرسمية والملاحظات</p>
-<a class="btn btn-primary"
-href="mailto:abomalak666666666666@gmail.com">راسلنا</a>
-</div>
-
-</div>
-
-</div>
-</section>
+<!-- ===== MAIN CONTENT CONTAINER ===== -->
+<main class="container">
+
+  <!-- NAVIGATION TABS -->
+  <nav class="tabs nav-tabs">
+    <a href="#about" class="tab-btn">عن التطبيق</a>
+    <a href="#download" class="tab-btn">تحميل التطبيق</a>
+    <a href="#privacy" class="tab-btn">سياسة الخصوصية وحذف البيانات</a>
+    <a href="#terms" class="tab-btn">شروط الاستخدام</a>
+    <a href="#contact" class="tab-btn">اتصل بالمطور</a>
+  </nav>
+
+  <!-- ===== DOWNLOAD CTA BANNER ===== -->
+  <div class="download-banner" id="download">
+    <h3>حمّل تطبيق دليل طنطا الطبي الآن</h3>
+    <p>احصل على كافة الخدمات الطبية والصحية في طنطا مباشرة على هاتفك بضغطة زر واحدة.</p>
+    <a href="https://play.google.com/store/apps/details?id=com.taaban.app" target="_blank" class="store-btn">
+      <span>📥 التحميل المباشر من Google Play</span>
+    </a>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section" id="about">
+    <div class="section-header">
+      <div class="section-icon icon-blue">ℹ️</div>
+      <h2>عن تطبيق دليل طنطا الطبي</h2>
+    </div>
+    <p>
+      <strong>دليل طنطا الطبي</strong> هو تطبيق خدمي محلي مبتكر مصمم خصيصاً لمساعدة أهالي مدينة طنطا في العثور السريع على العيادات الطبية، معامل التحاليل، مراكز الأشعة، والصيدليات في مختلف المناطق.
+    </p>
+    <p>
+      يعمل التطبيق كدليل معلوماتي جغرافي بحت يتيح للمستخدمين استعراض العناوين، أرقام الهواتف، مواعيد العمل، والمواقع على الخرائط بكل سهولة ودقة.
+    </p>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="label">إصدار التطبيق</div>
+        <div class="value">1.0.2 (Production)</div>
+      </div>
+      <div class="info-card">
+        <div class="label">المطور والبرمجة</div>
+        <div class="value">M - G - S</div>
+      </div>
+      <div class="info-card">
+        <div class="label">رقم الهاتف الرسمي</div>
+        <div class="value">01062186746</div>
+      </div>
+      <div class="info-card">
+        <div class="label">البريد الإلكتروني</div>
+        <div class="value">abomalak666666666666@gmail.com</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIVACY POLICY SECTION ===== -->
+  <section class="section" id="privacy">
+    <div class="section-header">
+      <div class="section-icon icon-teal">🛡️</div>
+      <h2>سياسة الخصوصية وحذف بيانات المستخدمين ومقدمي الخدمات</h2>
+    </div>
+    <ul class="policy-list">
+      <li>
+        <div class="list-num">١</div>
+        <div>
+          <strong>البيانات التي يتم جمعها</strong><br>
+          لا يتطلب التطبيق إنشاء حساب شخصي معقد. يتم حفظ التفضيلات وقائمة المفضلة محلياً على ذاكرة جهازك لضمان أعلى مستويات الخصوصية.
+        </div>
+      </li>
+      <li>
+        <div class="list-num">٢</div>
+        <div>
+          <strong>استخدام الموقع الجغرافي (Location)</strong><br>
+          يتم طلب إذن الوصول إلى موقعك الجغرافي فقط عند تفعيل خاصية "الأقرب إليك" لعرض المنشآت الطبية القريبة منك، ولا يتم تخزين موقعك أو تتبعه بشكل دائم.
+        </div>
+      </li>
+      <li>
+        <div class="list-num">٣</div>
+        <div>
+          <strong>بيانات مقدمي الخدمات (الأطباء والصيدليات والمعامل)</strong><br>
+          البيانات المسجلة لمقدمي الخدمات تقتصر على معلومات العمل الرسمية (العنوان، رقم الهاتف، التخصص) لتسهيل وصول المرضى إليهم.
+        </div>
+      </li>
+      <li>
+        <div class="list-num">٤</div>
+        <div>
+          <strong>أمان وحماية البيانات</strong><br>
+          تُشفَّر كافة الاتصالات بين التطبيق والخوادم باستخدام بروتوكولات الأمان القياسية (HTTPS)، مع تطبيق المعايير التقنية لحماية البيانات.
+        </div>
+      </li>
+    </ul>
+
+    <!-- Highlighted Box specifically addressing Google Play Data Deletion requirement -->
+    <div class="highlight-box">
+      <h3>🗑️ طلب حذف الحساب وحذف بيانات المستخدمين ومقدمي الخدمات:</h3>
+      <p>
+        يلتزم تطبيق "دليل طنطا الطبي" بتوفير تحكم كامل للمستخدمين ومقدمي الخدمات في بياناتهم. يحق لأي مستخدم أو مقدم خدمة طلب حذف بياناته نهائياً ومسح كافة السجلات من قاعدة البيانات في أي وقت، وذلك من خلال إرسال طلب رسمي عبر البريد الإلكتروني (abomalak666666666666@gmail.com) أو الاتصال بالمطور مباشرة، وسيتم تنفيذ طلب الحذف ومسح البيانات كلياً خلال 48 ساعة. كما يمكن مسح البيانات المؤقتة فوراً عن طريق إلغاء تثبيت التطبيق.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== TERMS OF USE SECTION ===== -->
+  <section class="section" id="terms">
+    <div class="section-header">
+      <div class="section-icon icon-purple">⚖️</div>
+      <h2>شروط الاستخدام وإخلاء المسؤولية</h2>
+    </div>
+    <ul class="policy-list">
+      <li>
+        <div class="list-num">١</div>
+        <div>
+          <strong>طبيعة الخدمة الإرشادية</strong><br>
+          تطبيق "دليل طنطا الطبي" هو دليل رقمي محلي لعرض البيانات والروابط الإرشادية فقط، ولا يُعد منصة طبية أو علاجية مباشرة.
+        </div>
+      </li>
+      <li>
+        <div class="list-num">٢</div>
+        <div>
+          <strong>مسؤولية المستخدم</strong><br>
+          المستخدم هو المسؤول الوحيد عن اختيار مقدم الخدمة الطبية المناسب له، ويتم أي تعامل أو تواصل مباشر بين المستخدم وجهة تقديم الخدمة خارج مسؤولية إدارة التطبيق.
+        </div>
+      </li>
+      <li>
+        <div class="list-num">٣</div>
+        <div>
+          <strong>دقة وموثوقية المعلومات</strong><br>
+          تُعرض البيانات والأسعار وأوقات العمل بناءً على ما يقدمه مزودو الخدمات والأماكن العامة، ونبذل قصارى جهدنا لمراجعتها وتحديثها بشكل دوري.
+        </div>
+      </li>
+      <li>
+        <div class="list-num">٤</div>
+        <div>
+          <strong>إخلاء المسؤولية الطبية التام</strong><br>
+          جميع المعلومات المعروضة في التطبيق هي لأغراض الإرشاد الجغرافي والمكاني فقط، ويجب دائماً استشارة طبيب مختص قبل اتخاذ أي قرار صحي أو علاجي.
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact">
+    <div class="section-header">
+      <div class="section-icon icon-green">📞</div>
+      <h2>تواصل مع المطور</h2>
+    </div>
+    <p>نحن نرحب دائماً بملاحظاتكم، اقتراحاتكم، أو طلبات انضمام مقدمي الخدمات وتحديث البيانات أو حذفها. فريق الدعم الفني جاهز لمساعدتكم.</p>
+    
+    <div style="margin-top: 20px; text-align: center;">
+      <a href="https://play.google.com/store/apps/details?id=com.taaban.app" target="_blank" class="store-btn" style="margin-bottom: 20px; display: inline-flex;">
+        <span>📥 رابط التطبيق على Google Play (الإصدار 1.0.2)</span>
+      </a>
+    </div>
+
+    <div class="contact-row">
+      <a href="tel:01062186746" class="contact-btn btn-teal">
+        📞 اتصال هاتفي مباشر
+      </a>
+      <a href="https://wa.me/201062186746" class="contact-btn btn-green">
+        💬 مراسلة عبر واتساب
+      </a>
+      <a href="mailto:abomalak666666666666@gmail.com" class="contact-btn btn-blue">
+        ✉️ البريد الإلكتروني
+      </a>
+    </div>
+  </section>
 
 </main>
 
-<!-- FOOTER -->
-
+<!-- ===== FOOTER ===== -->
 <footer>
-<div class="container">
-
-<div class="footer-main">
-
-<div>
-<h3>دليل طنطا الطبي</h3>
-<p>دليلك الرقمي للوصول إلى الخدمات الطبية في طنطا.</p>
-<br>
-<a class="btn btn-white" target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-تحميل التطبيق
-</a>
-</div>
-
-<div>
-<h3>روابط مهمة</h3>
-<div class="footer-links">
-<a href="#about">عن التطبيق</a>
-<a href="#services">الخدمات</a>
-<a href="#privacy">سياسة الخصوصية</a>
-<a href="#terms">شروط الاستخدام</a>
-<a href="#delete">حذف البيانات</a>
-<a href="#contact">التواصل</a>
-</div>
-</div>
-
-</div>
-
-<div class="copyright">
-جميع الحقوق محفوظة © 2026 دليل طنطا الطبي
-<br>
-تصميم وتطوير M - G - S
-<br>
-الإصدار 1.0.2
-</div>
-
-</div>
+  جميع الحقوق محفوظة © 2026 تطبيق دليل طنطا الطبي  |  تصميم وتطوير: M - G - S
 </footer>
-
-<!-- FLOATING DOWNLOAD BUTTON -->
-
-<a class="btn btn-primary float-download"
-target="_blank"
-href="https://play.google.com/store/apps/details?id=com.taaban.app">
-⬇ تحميل التطبيق
-</a>
 
 </body>
 </html>
