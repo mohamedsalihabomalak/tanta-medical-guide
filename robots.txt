@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohamedsalihabomalak.github.io/tanta-medical-guide/sitemap.xml
